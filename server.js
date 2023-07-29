@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express') //express to add
 const corsOptions = require('./config/corsOptions')
 const app = express() //app is using express 
@@ -8,6 +9,7 @@ const errorHandler = require('./middleware/errorHandler')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 app.listen(PORT, ()=> {console.log(`Server Started on ${PORT}`)}) // app is listening to port 3500
+console.log(process.env.NODE_ENV)
 
 //middleware for static file that server should listen 
 app.use('/', express.static(path.join(__dirname, 'public'))) // the server search for static file.
