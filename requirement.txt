@@ -1,0 +1,6 @@
+express
+cors
+dotenv
+cookie-parser
+date-fns
+uuid
